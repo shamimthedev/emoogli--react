@@ -1,7 +1,7 @@
 import { useParams } from "react-router-dom"
 import List from "../components/List"
 import { useState } from "react"
-import "./Products.scss"
+import "../Products.scss"
 
 const Products = () => {
   const catId = parseInt(useParams().id)
@@ -11,7 +11,7 @@ const Products = () => {
     <div className="products flex py-[30px] px-[50px]">
       <div className="left">
         <div className="filterItem">
-          <h2>Product Categories</h2>
+          <h2 className='text-2xl'>Product Categories</h2>
           <div className="input-items">
             <input type="checkbox" id='1' value={1} />
             <label htmlFor="1">Shoes</label>
@@ -22,11 +22,11 @@ const Products = () => {
           </div>
           <div className="input-items">
             <input type="checkbox" id='3' value={3} />
-            <label htmlFor="3">Skirts</label>
+            <label htmlFor="3">Coats</label>
           </div>
         </div>
         <div className="filterItem">
-          <h2>Filter by Price</h2>
+          <h2 className='text-2xl'>Filter by Price</h2>
           <div className="input-items">
             <span>0</span>
             <input type="range" min={0} max={1000} onChange={(e) => setMaxPrice(e.target.value)}/>
@@ -34,7 +34,7 @@ const Products = () => {
           </div>
         </div>
         <div className="filterItem">
-          <h2>Sort by</h2>
+          <h2 className='text-2xl'>Sort by</h2>
           <div className="input-items">
             <input type="radio" id='asc' value="asc" name="price" onChange={e=> setSort("asc")}/>
             <label htmlFor="asc">Price (Lowest first)</label>

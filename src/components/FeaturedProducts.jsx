@@ -60,9 +60,9 @@ const FeaturedProducts = ({type}) => {
         <div className="my-[100px] mx-[200px]">
             <div className="top flex items-center justify-between mb-12">
                 <h2 className="basis-1/2 capitalize font-bold text-[30px]">{type} Products</h2>
-                <p className="basis-2/3 text-gray-500">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo atque, voluptatem rem obcaecati praesentium in perferendis numquam tenetur corporis totam et, sequi natus ipsam animi quam iure perspiciatis veniam ex quaerat aut mollitia porro ratione placeat. Possimus odio facilis deleniti.</p>
+                <p className="basis-2/3 text-gray-500 text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo atque, voluptatem rem obcaecati praesentium in perferendis numquam tenetur corporis totam et, sequi natus ipsam animi quam iure perspiciatis veniam ex quaerat aut mollitia porro ratione placeat. Possimus odio facilis deleniti.</p>
             </div>
-            <div className="bottom flex justify-center gap-12">
+            <div className="bottom flex justify-center gap-12 flex-wrap">
                 {data.map((item) => (
                     <Card item={item} key={item.id} />
                 ))}

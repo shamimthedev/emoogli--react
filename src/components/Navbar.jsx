@@ -3,8 +3,11 @@ import { FaRegUser } from "react-icons/fa6";
 import { GoHeart } from "react-icons/go";
 import { IoCartOutline } from "react-icons/io5";
 import { Link } from "react-router-dom";
+import { useState } from "react";
+import Cart from "./Cart";
 
 const Navbar = () => {
+  const [open, setOpen] = useState(false)
   return (
     <div className="navbar h-20">
       <div className="wrapper py-[10px] px-[30px] flex justify-between">
@@ -47,13 +50,14 @@ const Navbar = () => {
             <IoIosSearch />
             <FaRegUser />
             <GoHeart />
-            <div className="cartIcon relative">
+            <div className="cartIcon relative" onClick={() => setOpen(!open)}>
               <IoCartOutline />
               <span className="text-[12px] text-white bg-blue w-5 h-5 rounded-[50%] flex items-center justify-center absolute -top-[10px] -right-[10px] cursor-pointer">0</span>
             </div>
           </div>
         </div>
       </div>
+      {open && <Cart />}
     </div>
   )
 }

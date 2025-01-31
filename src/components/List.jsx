@@ -1,7 +1,6 @@
-import Card from "./Card";
+import Card from './Card'
 
-
-const FeaturedProducts = ({type}) => {
+const List = () => {
     const data = [
         {
             id: 1,
@@ -30,19 +29,14 @@ const FeaturedProducts = ({type}) => {
             price: 9
         }
     ];
-    return (
-        <div className="my-[100px] mx-[200px]">
-            <div className="top flex items-center justify-between mb-12">
-                <h2 className="basis-1/2 capitalize font-bold text-[30px]">{type} Products</h2>
-                <p className="basis-2/3 text-gray-500">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo atque, voluptatem rem obcaecati praesentium in perferendis numquam tenetur corporis totam et, sequi natus ipsam animi quam iure perspiciatis veniam ex quaerat aut mollitia porro ratione placeat. Possimus odio facilis deleniti.</p>
-            </div>
-            <div className="bottom flex justify-center gap-12">
-                {data.map((item) => (
-                    <Card item={item} key={item.id} />
-                ))}
-            </div>
-        </div>
-    )
+  return (
+    <div>
+        {data?.map(item=>(
+            <Card item={item} key={item.id}/>
+            
+            ))}
+    </div>
+  )
 }
 
-export default FeaturedProducts
+export default List
